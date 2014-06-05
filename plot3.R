@@ -1,6 +1,6 @@
 # Read Data
 #
-household_power_consumption <- read.csv("~/Work/Coursera Data Science Track/Exploratory Data Analysis/household_power_consumption.txt", sep=";")
+household_power_consumption <- read.csv("household_power_consumption.txt", sep=";")
 
 # Choose Desire Dates
 #

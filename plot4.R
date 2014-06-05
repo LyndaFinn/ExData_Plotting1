@@ -1,6 +1,6 @@
 # Read Data
 #
-household_power_consumption <- read.csv("~/Work/Coursera Data Science Track/Exploratory Data Analysis/household_power_consumption.txt", sep=";")
+household_power_consumption <- read.csv("household_power_consumption.txt", sep=";")
 
 # Choose Desire Dates
 #
@@ -17,7 +17,7 @@ hpc$Sub_metering_1<- as.numeric(as.character(hpc$Sub_metering_1))
 hpc$Sub_metering_2<- as.numeric(as.character(hpc$Sub_metering_2))
 hpc$Sub_metering_3<- as.numeric(as.character(hpc$Sub_metering_3))
 
-# Make PNG line Plot with three lines
+# Make PNG 4 plot picture
 #
 png(filename = "plot4.png",
     width = 480, height = 480, units = "px", pointsize = 12,
@@ -30,6 +30,6 @@ plot(hpc$dt, hpc$Sub_metering_1,  type="l",ylab="Energy Sub Metering", xlab="")
 lines(hpc$dt, hpc$Sub_metering_2,col="red")
 lines(hpc$dt, hpc$Sub_metering_3,col="blue")
 legend("topright", lty = 1, col = c("black", "blue", "red"), 
-       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
-plot(hpc$dt, hpc$Global_reactive_power,  type="l",ylab="Global_reactive_power", xlab="datetime")
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), cex=.9, bty="n")
+plot(hpc$dt, hpc$Global_reactive_power,  type="l",ylab="Global_reactive_power", xlab="datetime",cex=1, lwd=.1)
 dev.off()
